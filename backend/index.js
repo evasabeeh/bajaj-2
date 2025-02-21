@@ -36,6 +36,10 @@ app.post("/bfhl", (req, res) => {
     }
 });
 
+app.get("/", (req, res) => {
+    res.send("API is configuring.")
+});
+
 // GET Route
 app.get("/bfhl", (req, res) => {
     res.status(200).json({ operation_code: 1 });
@@ -43,5 +47,4 @@ app.get("/bfhl", (req, res) => {
 
 // Start Server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
 
